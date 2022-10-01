@@ -1,3 +1,14 @@
+:root {
+    --unread-dot-color: hsl(1, 90%, 64%);
+    --link-color: hsl(219, 85%, 26%);
+    --unread-background-color: hsl(210, 60%, 98%);
+    --message-hover-color: hsl(211, 68%, 94%);
+    --message-border-color: hsl(205, 33%, 90%);
+    --date-color: hsl(219, 14%, 63%);
+    --main-text-color: hsl(219, 12%, 42%);
+    --dark-text-color: hsl(224, 21%, 14%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +16,11 @@
 
 body {
     padding: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 header {
-    padding: 5px 0 15px;
+    padding: 5px 0 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,11 +29,24 @@ header {
 header .title-wrapper {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 header h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    color: var(--dark-text-color);
+}
+
+.mark-read {
+    font-size: 0.9rem;
+}
+
+header .number {
+    color: white;
+    background-color: var(--link-color);
+    padding: 3px 10px;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 a {
@@ -29,13 +54,18 @@ a {
 }
 
 a.profile {
-    color: black;
+    color: var(--dark-text-color);
     font-weight: bold;
 }
 
 a.post,
+a.group,
+.mark-read {
+    color: var(--link-color);
+}
+
 a.group {
-    color: blue;
+    font-weight: bold;
 }
 
 .notifications {
@@ -62,10 +92,16 @@ a.group {
 
 .notification {
     padding: 15px;
-    border: 1px solid black;
+    border-radius: 10px;
     display: grid;
     grid-template-columns: 50px auto;
     gap: 10px;
+    font-size: 0.87rem;
+    color: var(--main-text-color);
+}
+
+.notification:not(.read) {
+    background-color: var(--unread-background-color);
 }
 
 .notification-content.picture-comment {
@@ -78,14 +114,28 @@ a.group {
     margin-bottom: 5px;
 }
 
+.notification:not(.read) .notification-title::after {
+    content: '';
+    margin-left: 5px;
+    background-color: var(--unread-dot-color);
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    position: relative;
+    bottom: 1.5px;
+}
+
 .date {
-    color: gray;
+    color: var(--date-color);
 }
 
 .message-summary {
+    margin-top: 10px;
     box-sizing: border-box;
-    padding: 10px;
-    border: 1px solid gray;
+    padding: 13px;
+    border: 1px solid var(--message-border-color);
+    border-radius: 5px;
 }
 
 .attribution {
