@@ -75,8 +75,8 @@ a.group {
 }
 
 .profile-image {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: rgb(190, 190, 190);
     border-radius: 50%;
 }
@@ -84,9 +84,7 @@ a.group {
 .picture {
     width: 40px;
     height: 40px;
-    background-color: rgb(190, 190, 190);
     box-sizing: border-box;
-    border: 1px solid black;
     flex-shrink: 0;
 }
 
