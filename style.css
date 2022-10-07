@@ -19,6 +19,27 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+a.profile {
+    color: var(--dark-text-color);
+    font-weight: bold;
+}
+
+a.post,
+a.group,
+.mark-read {
+    color: var(--link-color);
+}
+
+a.group {
+    font-weight: bold;
+}
+
+/* Header Section */
+
 header {
     padding: 5px 0 25px;
     display: flex;
@@ -49,28 +70,10 @@ header .number {
     border-radius: 5px;
 }
 
-a {
-    text-decoration: none;
-}
-
-a.profile {
-    color: var(--dark-text-color);
-    font-weight: bold;
-}
-
-a.post,
-a.group,
-.mark-read {
-    color: var(--link-color);
-}
-
-a.group {
-    font-weight: bold;
-}
+/* Notifications Section */
 
 .notifications {
     display: grid;
-    grid-template-columns: auto;
     gap: 10px;
 }
 
@@ -135,6 +138,8 @@ a.group {
     border: 1px solid var(--message-border-color);
     border-radius: 5px;
 }
+
+/* Attribution Section */
 
 .attribution {
     font-size: 11px;
