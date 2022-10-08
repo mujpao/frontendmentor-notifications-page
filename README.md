@@ -39,7 +39,7 @@ Mobile:
 ### Links
 
 - Solution URL: [GitHub repo](https://github.com/mujpao/frontendmentor-notifications-page)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [GitHub Pages](https://mujpao.github.io/frontendmentor-notifications-page/)
 
 ## My process
 
