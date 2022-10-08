@@ -15,8 +15,10 @@
 }
 
 body {
-    padding: 20px;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 a {
@@ -36,6 +38,13 @@ a.group,
 
 a.group {
     font-weight: bold;
+}
+
+.content {
+    box-sizing: border-box;
+    max-width: 650px;
+    background: white;
+    padding: 25px 20px;
 }
 
 /* Header Section */
@@ -148,4 +157,17 @@ header .number {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 770px) {
+    body {
+        background-color: var(--unread-background-color);
+        padding-top: 60px;
+    }
+
+    .content {
+        border-radius: 10px;
+        padding: 25px 25px;
+        margin-bottom: 70px;
+    }
 }
