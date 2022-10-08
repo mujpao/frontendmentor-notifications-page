@@ -1,6 +1,7 @@
 :root {
     --unread-dot-color: hsl(1, 90%, 64%);
     --link-color: hsl(219, 85%, 26%);
+    --link-hover-color: hsl(219, 59%, 38%);
     --unread-background-color: hsl(210, 60%, 98%);
     --message-hover-color: hsl(211, 68%, 94%);
     --message-border-color: hsl(205, 33%, 90%);
@@ -25,19 +26,27 @@ a {
     text-decoration: none;
 }
 
+a.profile,
+a.post,
+a.group {
+    font-weight: bold;
+}
+
 a.profile {
     color: var(--dark-text-color);
-    font-weight: bold;
 }
 
 a.post,
-a.group,
 .mark-read {
-    color: var(--link-color);
+    color: var(--main-text-color);
 }
 
 a.group {
-    font-weight: bold;
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-hover-color);
 }
 
 .content {
@@ -94,10 +103,22 @@ header .number {
 }
 
 .picture {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     box-sizing: border-box;
     flex-shrink: 0;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.picture:hover {
+    cursor: pointer;
+    border: 2px solid var(--message-border-color);
+}
+
+.picture img {
+    max-width: 100%;
+    vertical-align: middle;
 }
 
 .notification {
@@ -146,6 +167,11 @@ header .number {
     padding: 13px;
     border: 1px solid var(--message-border-color);
     border-radius: 5px;
+}
+
+.message-summary:hover {
+    background-color: var(--message-hover-color);
+    cursor: pointer;
 }
 
 /* Attribution Section */
